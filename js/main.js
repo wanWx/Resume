@@ -14,8 +14,10 @@ function main() {
 
         // Testimonial Slider
         $('a.page-scroll').click(function() {
+          console.log(location.pathname.replace(/^\//, ''));
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
+
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
